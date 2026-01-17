@@ -19,10 +19,9 @@
   </head>
   <body>
     <header class="site-header">
-      <div class="container narrow header-inner">
+      <div class="container header-inner">
         <div class="brand">
           <p class="logo">CitaRadar</p>
-          <p class="motto">Saber cuándo hay cita</p>
         </div>
         <nav class="toc" aria-label="Secciones principales">
           <a href="#como-funciona">Cómo funciona</a>
@@ -65,20 +64,21 @@
           </div>
           <aside class="hero-card" aria-label="Notificación en Telegram">
             <div class="card-header">
-              <span class="card-app">Telegram</span>
+              <div class="card-app">
+                <span class="card-icon" aria-hidden="true"></span>
+                <span>Telegram</span>
+              </div>
               <span class="card-dot" aria-hidden="true"></span>
             </div>
-            <p class="card-body">
-              En cuanto aparece una cita disponible,<br />
-              recibes una notificación en Telegram.
-            </p>
-            <p class="card-meta">CitaRadar</p>
+            <p class="card-title">CitaRadar</p>
+            <p class="card-body">En cuanto aparece una cita disponible,</p>
+            <p class="card-meta">recibes una notificación en Telegram.</p>
           </aside>
         </div>
       </section>
 
       <section class="section">
-        <div class="container narrow">
+        <div class="container content">
           <h2>Qué hace CitaRadar</h2>
           <p>
             Monitorizamos la aparición de citas disponibles<br />
@@ -94,7 +94,7 @@
       </section>
 
       <section class="section surface" id="como-funciona">
-        <div class="container narrow">
+        <div class="container content">
           <h2>¿Cómo funciona?</h2>
           <p>
             CitaRadar es un servicio de notificaciones.<br />
@@ -142,14 +142,14 @@
       </section>
 
       <section class="section paper" id="tramites">
-        <div class="container narrow">
+        <div class="container content">
           <h2>Trámites disponibles en CitaRadarBot</h2>
           <p class="small">
             El catálogo de trámites puede variar según la ciudad<br />
             y la disponibilidad del portal oficial.
           </p>
         </div>
-        <div class="container narrow accordion">
+        <div class="container accordion">
           <details class="accordion-item" open>
             <summary><span>🆔 Extranjería</span></summary>
             <div class="accordion-body">
@@ -308,7 +308,7 @@
       </section>
 
       <section class="section surface" id="privacidad">
-        <div class="container narrow">
+        <div class="container content">
           <h2>Privacidad y seguridad</h2>
           <p>
             No solicitamos nombres de usuario ni contraseñas.<br />
@@ -324,7 +324,7 @@
       </section>
 
       <section class="section paper" id="faq">
-        <div class="container narrow">
+        <div class="container content">
           <h2>Preguntas frecuentes</h2>
           <details class="faq-item">
             <summary>¿CitaRadar acelera los portales o la obtención de citas?</summary>
@@ -404,7 +404,7 @@
       </section>
 
       <section class="section surface" id="opiniones">
-        <div class="container narrow">
+        <div class="container">
           <h2>Opiniones de usuarios</h2>
           <div class="testimonials" aria-label="Opiniones de usuarios">
             <article class="testimonial">
@@ -471,7 +471,7 @@
       </section>
 
       <section class="section paper cta-final" id="telegram">
-        <div class="container narrow">
+        <div class="container content">
           <h2>Cierre</h2>
           <p>
             Esperar es la parte más difícil del proceso.<br />
@@ -487,7 +487,7 @@
       </section>
 
       <section class="section surface" id="creadores">
-        <div class="container narrow">
+        <div class="container content">
           <h2>Creadores de CitaRadar</h2>
           <p>
             LIAH es el Leading Intelligent Architecture Hub —<br />
@@ -519,21 +519,27 @@
     <a class="fab-cta" href="#telegram">Empezar en Telegram</a>
 
     <footer class="site-footer" id="contacto">
-      <div class="container narrow">
-        <p>
-          CitaRadar — servicio independiente de notificaciones<br />
-          para monitorizar la disponibilidad de citas<br />
-          en portales oficiales de España
-        </p>
-        <p class="footer-links">
-          Política de privacidad<br />
-          Términos de uso
-        </p>
-        <p>
-          Contacto:<br />
-          hola@…<br />
-          +34 …
-        </p>
+      <div class="container footer-grid">
+        <div class="footer-block footer-summary">
+          <p>
+            CitaRadar — servicio independiente de notificaciones<br />
+            para monitorizar la disponibilidad de citas<br />
+            en portales oficiales de España
+          </p>
+        </div>
+        <div class="footer-block footer-links">
+          <p>
+            Política de privacidad<br />
+            Términos de uso
+          </p>
+        </div>
+        <div class="footer-block footer-contact">
+          <p>
+            Contacto:<br />
+            hola@…<br />
+            +34 …
+          </p>
+        </div>
       </div>
     </footer>
   </body>
