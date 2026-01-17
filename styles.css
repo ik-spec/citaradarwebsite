@@ -181,9 +181,9 @@ p {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(247, 246, 243, 0.72);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--line);
+  background: linear-gradient(140deg, #2f4c68 0%, #213a52 100%);
+  color: #f6f1e8;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .header-inner {
@@ -201,10 +201,22 @@ p {
   flex-wrap: nowrap;
 }
 
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  line-height: 1.1;
+}
+
 .logo {
   font-size: clamp(1.6rem, 1.6vw + 1rem, 2.2rem);
   font-weight: 600;
   margin: 0;
+}
+
+.brand-tagline {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .brand-illustration {
@@ -217,7 +229,7 @@ p {
   display: flex;
   gap: 1.6rem;
   align-items: center;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.8);
   text-transform: none;
   letter-spacing: 0.02em;
   font-weight: 500;
@@ -231,8 +243,8 @@ p {
 }
 
 .toc a:hover {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
+  color: #ffffff;
+  border-bottom-color: #ffffff;
 }
 
 .toc-mobile {
@@ -246,7 +258,7 @@ p {
   font-weight: 600;
   text-transform: none;
   letter-spacing: 0.04em;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.85);
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
@@ -585,8 +597,8 @@ p {
 
 .site-footer {
   padding: clamp(2.5rem, 6vw, 4rem) 0;
-  border-top: 1px solid #701218;
-  background: var(--footer);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  background: linear-gradient(160deg, #2b4966 0%, #1c3146 100%);
   color: var(--footer-ink);
 }
 
