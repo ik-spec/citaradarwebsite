@@ -7,6 +7,9 @@
   --panel: #f1ede6;
   --accent: #b2262d;
   --accent-dark: #8f1d23;
+  --size-base: clamp(1rem, 0.8vw + 0.85rem, 1.125rem);
+  --size-md: clamp(1.35rem, 1.6vw + 0.95rem, 1.9rem);
+  --size-lg: clamp(2.3rem, 3.8vw + 1.3rem, 3.5rem);
 }
 
 *,
@@ -19,9 +22,11 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", serif;
-  font-size: clamp(1rem, 1.2vw, 1.15rem);
-  line-height: 1.7;
+  font-family: "Inter", "SF Pro Display", "SF Pro Text", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: var(--size-base);
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+  text-rendering: optimizeLegibility;
 }
 
 a {
@@ -37,16 +42,17 @@ a:focus-visible {
 h1,
 h2 {
   line-height: 1.15;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.005em;
   margin: 0 0 1.2rem;
+  font-weight: 600;
 }
 
 h1 {
-  font-size: clamp(2.6rem, 6vw, 4.4rem);
+  font-size: var(--size-lg);
 }
 
 h2 {
-  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-size: var(--size-md);
 }
 
 p {
@@ -82,7 +88,7 @@ p {
 }
 
 .logo {
-  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-size: var(--size-md);
   font-weight: 600;
   margin: 0;
 }
@@ -90,15 +96,9 @@ p {
 .motto {
   margin: 0;
   color: var(--muted);
-  font-size: clamp(1rem, 2vw, 1.35rem);
-}
-
-.hero p {
-  font-size: clamp(1.1rem, 2.2vw, 1.35rem);
 }
 
 .small {
-  font-size: 0.98rem;
   color: var(--muted);
 }
 
@@ -114,9 +114,9 @@ p {
   align-items: center;
   justify-content: center;
   padding: 0.85rem 1.8rem;
-  border-radius: 999px;
+  border-radius: 6px;
   border: 1px solid var(--ink);
-  font-size: 1rem;
+  font-size: inherit;
   letter-spacing: 0.02em;
   transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
@@ -154,7 +154,7 @@ p {
 }
 
 .step-number {
-  font-size: clamp(2.1rem, 4vw, 3rem);
+  font-size: var(--size-md);
   font-weight: 600;
   line-height: 1;
   color: var(--accent);
@@ -178,7 +178,7 @@ p {
 }
 
 .accordion-item summary {
-  font-size: clamp(1.2rem, 2.4vw, 1.6rem);
+  font-size: inherit;
   font-weight: 600;
   cursor: pointer;
   list-style: none;
@@ -204,7 +204,6 @@ p {
 .category-note {
   margin: 0 0 0.8rem;
   color: var(--muted);
-  font-size: 0.98rem;
 }
 
 .category-list {
@@ -261,7 +260,6 @@ p {
   padding: clamp(2.5rem, 6vw, 4rem) 0;
   border-top: 1px solid var(--line);
   color: var(--muted);
-  font-size: 0.95rem;
 }
 
 .site-footer p {
