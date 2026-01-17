@@ -206,6 +206,7 @@ p {
   flex-direction: column;
   gap: 0.2rem;
   line-height: 1.1;
+  text-align: left;
 }
 
 .logo {
@@ -220,7 +221,7 @@ p {
 }
 
 .brand-illustration {
-  height: clamp(36px, 4vw, 48px);
+  height: clamp(56px, 6vw, 72px);
   width: auto;
   display: block;
 }
@@ -691,8 +692,10 @@ p {
 
 @media (max-width: 900px) {
   .header-inner {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr auto;
     align-items: center;
+    gap: 1rem;
   }
 
   .toc {
@@ -701,7 +704,8 @@ p {
 
   .toc-mobile {
     display: block;
-    margin-left: auto;
+    margin-left: 0;
+    justify-self: end;
     align-self: center;
   }
 
