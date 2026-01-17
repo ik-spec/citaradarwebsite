@@ -1,14 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap");
+
 :root {
   color-scheme: light;
-  --paper: #f7f3ed;
-  --white: #ffffff;
-  --tone: #f3eee7;
-  --blue-1: #eef4ff;
-  --blue-2: #f8fbff;
+  --paper: #f7f6f3;
+  --surface: #f1efe9;
   --ink: #1e1b17;
   --muted: #4f4a43;
   --line: #ddd5c8;
-  --panel: #f1ede6;
   --accent: #b2262d;
   --accent-dark: #8f1d23;
   --footer: #8b171c;
@@ -28,11 +26,32 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: "Inter", "SF Pro Display", "SF Pro Text", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Manrope", "Inter", "SF Pro Display", "SF Pro Text", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-size: var(--size-base);
-  line-height: 1.65;
+  line-height: 1.72;
   letter-spacing: 0.01em;
   text-rendering: optimizeLegibility;
+  position: relative;
+  isolation: isolate;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 0.55 0 0 0 0 0.64 0 0 0 0 0.82 0 0 0 0.35 0'/></filter><rect width='120' height='120' filter='url(%23n)' opacity='0.5'/></svg>");
+  opacity: 0.08;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.site-header,
+main,
+.site-footer,
+.fab-cta {
+  position: relative;
+  z-index: 1;
 }
 
 a {
@@ -49,21 +68,45 @@ h1,
 h2 {
   line-height: 1.15;
   letter-spacing: 0.004em;
-  margin: 0 0 1.2rem;
+  margin: 0 0 1.4rem;
   font-weight: 600;
   text-wrap: balance;
 }
 
 h1 {
   font-size: var(--size-lg);
+  position: relative;
 }
 
 h2 {
   font-size: var(--size-md);
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  width: 3.6rem;
+  height: 2px;
+  margin-top: 1.4rem;
+  background: var(--accent);
+}
+
+h2::before {
+  content: "";
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 999px;
+  background: var(--accent);
+  transform: translateY(0.08em);
 }
 
 p {
-  margin: 0 0 1.2rem;
+  margin: 0 0 1.5rem;
+  text-wrap: pretty;
 }
 
 .container {
@@ -72,11 +115,12 @@ p {
 }
 
 .narrow {
-  max-width: 68ch;
+  max-width: 44rem;
 }
 
 .section {
   padding: clamp(3.5rem, 8vw, 6.5rem) 0;
+  scroll-margin-top: 6.5rem;
 }
 
 .section + .section {
@@ -84,19 +128,28 @@ p {
 }
 
 .paper {
-  background: var(--white);
+  background: var(--paper);
 }
 
-.tone {
-  background: var(--tone);
-}
-
-.gradient-blue {
-  background: radial-gradient(120% 120% at 10% 0%, var(--blue-2) 0%, var(--blue-1) 55%, #e8f1ff 100%);
+.surface {
+  background: var(--surface);
 }
 
 .site-header {
-  padding: clamp(2rem, 5vw, 3.5rem) 0 0;
+  padding: 1.2rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(247, 246, 243, 0.9);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
 .brand {
@@ -115,6 +168,77 @@ p {
 .motto {
   margin: 0;
   color: var(--muted);
+}
+
+.toc {
+  display: flex;
+  gap: 1.4rem;
+  align-items: center;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.toc a {
+  padding-bottom: 0.15rem;
+  border-bottom: 1px solid transparent;
+}
+
+.toc a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
+  gap: 3rem;
+  align-items: start;
+}
+
+.hero-text {
+  max-width: 44rem;
+}
+
+.hero-card {
+  border: 1px solid var(--line);
+  background: #fbfaf7;
+  border-radius: 12px;
+  padding: 1.4rem 1.6rem;
+  box-shadow: 0 18px 40px rgba(20, 16, 12, 0.08);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.card-app {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.card-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+.card-body {
+  margin-bottom: 1.1rem;
+}
+
+.card-meta {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 500;
 }
 
 .small {
@@ -158,16 +282,27 @@ p {
 
 .steps {
   list-style: none;
-  margin: 2rem 0 0;
+  margin: 2.2rem 0 0;
   padding: 0;
   display: grid;
-  gap: 1.75rem;
+  gap: 1.6rem;
+  position: relative;
+}
+
+.steps::before {
+  content: "";
+  position: absolute;
+  left: 1.1rem;
+  top: 0.2rem;
+  bottom: 0.2rem;
+  width: 1px;
+  background: rgba(178, 38, 45, 0.35);
 }
 
 .step {
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1.2rem;
+  grid-template-columns: 2.2rem 1fr;
+  gap: 1.6rem;
   align-items: start;
 }
 
@@ -176,11 +311,22 @@ p {
   font-weight: 600;
   line-height: 1;
   color: var(--accent);
-  min-width: 2.4rem;
+  text-align: center;
 }
 
-.step-body {
+.step-content {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.step-title {
   margin: 0;
+  font-weight: 600;
+}
+
+.step-text {
+  margin: 0;
+  color: var(--muted);
 }
 
 .accordion {
@@ -232,14 +378,6 @@ p {
 
 .category-list li {
   margin: 0.35rem 0;
-}
-
-.panel {
-  background: var(--panel);
-}
-
-.panel.section {
-  border-top: 1px solid var(--line);
 }
 
 .faq-item {
@@ -303,6 +441,8 @@ p {
   flex: 0 0 min(520px, 85vw);
   border: 1px solid var(--line);
   padding: 1.4rem 1.6rem;
+  background: var(--paper);
+  box-shadow: 0 16px 30px rgba(20, 16, 12, 0.08);
   scroll-snap-align: start;
 }
 
@@ -337,6 +477,20 @@ p {
   }
 }
 
+@media (max-width: 900px) {
+  .header-inner {
+    flex-wrap: wrap;
+  }
+
+  .toc {
+    display: none;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 720px) {
   .cta {
     flex-direction: column;
@@ -349,5 +503,26 @@ p {
 
   .step-number {
     margin-bottom: 0.4rem;
+  }
+}
+
+.fab-cta {
+  position: fixed;
+  bottom: 1.2rem;
+  right: 1.2rem;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.85rem 1.4rem;
+  border-radius: 999px;
+  box-shadow: 0 18px 30px rgba(178, 38, 45, 0.2);
+  display: none;
+  z-index: 30;
+}
+
+@media (max-width: 900px) {
+  .fab-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 }

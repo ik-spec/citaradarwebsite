@@ -19,29 +19,51 @@
   </head>
   <body>
     <header class="site-header">
-      <div class="container narrow brand">
-        <p class="logo">CitaRadar</p>
-        <p class="motto">Saber cuándo hay cita</p>
+      <div class="container narrow header-inner">
+        <div class="brand">
+          <p class="logo">CitaRadar</p>
+          <p class="motto">Saber cuándo hay cita</p>
+        </div>
+        <nav class="toc" aria-label="Secciones principales">
+          <a href="#como-funciona">Cómo funciona</a>
+          <a href="#tramites">Trámites</a>
+          <a href="#faq">FAQ</a>
+          <a href="#opiniones">Opiniones</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
       </div>
     </header>
 
     <main id="contenido">
       <section class="section hero paper">
-        <div class="container narrow">
-          <h1>A veces conseguir una cita es más difícil que el propio trámite</h1>
-          <p>
-            A veces todo está listo —<br />
-            los documentos reunidos, los requisitos claros —<br />
-            pero la cita simplemente no aparece.
-          </p>
-          <p>
-            Las citas desaparecen en segundos.<br />
-            Los portales oficiales muestran una y otra vez<br />
-            “no hay fechas disponibles”.<br />
-            Comprobar se convierte en una rutina<br />
-            que consume tiempo y energía.
-          </p>
-          <p>CitaRadar nace para simplificar ese momento.</p>
+        <div class="container hero-grid">
+          <div class="hero-text">
+            <h1>A veces conseguir una cita es más difícil que el propio trámite</h1>
+            <p>
+              A veces todo está listo —<br />
+              los documentos reunidos, los requisitos claros —<br />
+              pero la cita simplemente no aparece.
+            </p>
+            <p>
+              Las citas desaparecen en segundos.<br />
+              Los portales oficiales muestran una y otra vez<br />
+              “no hay fechas disponibles”.<br />
+              Comprobar se convierte en una rutina<br />
+              que consume tiempo y energía.
+            </p>
+            <p>CitaRadar nace para simplificar ese momento.</p>
+          </div>
+          <aside class="hero-card" aria-label="Notificación en Telegram">
+            <div class="card-header">
+              <span class="card-app">Telegram</span>
+              <span class="card-dot" aria-hidden="true"></span>
+            </div>
+            <p class="card-body">
+              En cuanto aparece una cita disponible,<br />
+              recibes una notificación en Telegram.
+            </p>
+            <p class="card-meta">CitaRadar</p>
+          </aside>
         </div>
       </section>
 
@@ -61,7 +83,7 @@
         </div>
       </section>
 
-      <section class="section gradient-blue" id="como-funciona">
+      <section class="section surface" id="como-funciona">
         <div class="container narrow">
           <h2>¿Cómo funciona?</h2>
           <p>
@@ -73,28 +95,31 @@
           <ol class="steps">
             <li class="step">
               <span class="step-number">1</span>
-              <p class="step-body">Seleccionas la ciudad y el trámite que necesitas.</p>
+              <div class="step-content">
+                <p class="step-title">Seleccionas la ciudad y el trámite</p>
+                <p class="step-text">que necesitas.</p>
+              </div>
             </li>
             <li class="step">
               <span class="step-number">2</span>
-              <p class="step-body">
-                El bot comprueba automáticamente el portal oficial<br />
-                las 24 horas del día, los 7 días de la semana.
-              </p>
+              <div class="step-content">
+                <p class="step-title">El bot comprueba automáticamente el portal oficial</p>
+                <p class="step-text">las 24 horas del día, los 7 días de la semana.</p>
+              </div>
             </li>
             <li class="step">
               <span class="step-number">3</span>
-              <p class="step-body">
-                En cuanto aparece una cita disponible,<br />
-                recibes una notificación en Telegram.
-              </p>
+              <div class="step-content">
+                <p class="step-title">En cuanto aparece una cita disponible,</p>
+                <p class="step-text">recibes una notificación en Telegram.</p>
+              </div>
             </li>
             <li class="step">
               <span class="step-number">4</span>
-              <p class="step-body">
-                Accedes al enlace y realizas la cita directamente<br />
-                en la web oficial del organismo correspondiente.
-              </p>
+              <div class="step-content">
+                <p class="step-title">Accedes al enlace y realizas la cita directamente</p>
+                <p class="step-text">en la web oficial del organismo correspondiente.</p>
+              </div>
             </li>
           </ol>
           <p>
@@ -272,7 +297,7 @@
         </div>
       </section>
 
-      <section class="section panel" id="privacidad">
+      <section class="section surface" id="privacidad">
         <div class="container narrow">
           <h2>Privacidad y seguridad</h2>
           <p>
@@ -368,7 +393,7 @@
         </div>
       </section>
 
-      <section class="section gradient-blue" id="opiniones">
+      <section class="section surface" id="opiniones">
         <div class="container narrow">
           <h2>Opiniones de usuarios</h2>
           <div class="testimonials" aria-label="Opiniones de usuarios">
@@ -451,7 +476,7 @@
         </div>
       </section>
 
-      <section class="section" id="creadores">
+      <section class="section surface" id="creadores">
         <div class="container narrow">
           <h2>Creadores de CitaRadar</h2>
           <p>
@@ -481,7 +506,9 @@
       </section>
     </main>
 
-    <footer class="site-footer">
+    <a class="fab-cta" href="#telegram">Empezar en Telegram</a>
+
+    <footer class="site-footer" id="contacto">
       <div class="container narrow">
         <p>
           CitaRadar — servicio independiente de notificaciones<br />
