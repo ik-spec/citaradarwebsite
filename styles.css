@@ -196,8 +196,8 @@ p {
 .brand {
   display: flex;
   flex-direction: row;
-  gap: 0;
-  align-items: baseline;
+  gap: 0.85rem;
+  align-items: center;
   flex-wrap: nowrap;
 }
 
@@ -205,6 +205,12 @@ p {
   font-size: clamp(1.6rem, 1.6vw + 1rem, 2.2rem);
   font-weight: 600;
   margin: 0;
+}
+
+.brand-illustration {
+  height: 28px;
+  width: auto;
+  display: block;
 }
 
 .toc {
@@ -588,6 +594,28 @@ p {
   font-weight: 500;
 }
 
+.footer-links a {
+  color: inherit;
+}
+
+.contact-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.telegram-icon {
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+}
+
+.telegram-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
 .footer-grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
@@ -620,6 +648,18 @@ p {
   font-weight: 500;
 }
 
+.footer-illustration {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-illustration img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
 @media (min-width: 1024px) {
   .hero-grid {
     grid-template-columns: 1.2fr 0.8fr;
@@ -638,6 +678,7 @@ p {
 
   .toc-mobile {
     display: block;
+    margin-left: auto;
   }
 
   .hero-grid {
