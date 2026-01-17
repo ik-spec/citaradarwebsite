@@ -250,6 +250,10 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
+  justify-content: center;
+  padding: 0.35rem 0;
+  line-height: 1;
+  height: 32px;
 }
 
 .toc-mobile summary::-webkit-details-marker {
@@ -262,6 +266,7 @@ p {
   height: 0.1rem;
   background: currentColor;
   box-shadow: 0 0.35rem 0 0 currentColor, 0 0.7rem 0 0 currentColor;
+  transform: translateY(-1px);
 }
 
 .toc-mobile-panel {
@@ -675,6 +680,7 @@ p {
 @media (max-width: 900px) {
   .header-inner {
     flex-wrap: wrap;
+    align-items: center;
   }
 
   .toc {
@@ -684,6 +690,7 @@ p {
   .toc-mobile {
     display: block;
     margin-left: auto;
+    align-self: center;
   }
 
   .hero-grid {
