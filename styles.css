@@ -13,7 +13,7 @@
   --footer-ink: #fdf5ee;
   --size-base: clamp(1rem, 0.8vw + 0.85rem, 1.125rem);
   --size-md: clamp(1.35rem, 1.6vw + 0.95rem, 1.9rem);
-  --size-lg: clamp(2.3rem, 3.8vw + 1.3rem, 3.5rem);
+  --size-lg: clamp(2.25rem, 2.6vw + 1.2rem, 4rem);
 }
 
 *,
@@ -28,7 +28,7 @@ body {
   color: var(--ink);
   font-family: "Manrope", "Inter", "SF Pro Display", "SF Pro Text", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-size: var(--size-base);
-  line-height: 1.72;
+  line-height: 1.75;
   letter-spacing: 0.01em;
   text-rendering: optimizeLegibility;
   position: relative;
@@ -115,12 +115,17 @@ p {
 }
 
 .narrow {
-  max-width: 44rem;
+  max-width: 60ch;
 }
 
 .section {
   padding: clamp(3.5rem, 8vw, 6.5rem) 0;
   scroll-margin-top: 6.5rem;
+}
+
+.hero {
+  padding-top: clamp(4rem, 6vw, 5rem);
+  padding-bottom: clamp(3rem, 6vw, 4.5rem);
 }
 
 .section + .section {
@@ -154,9 +159,10 @@ p {
 
 .brand {
   display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-  align-items: flex-start;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: baseline;
+  flex-wrap: nowrap;
 }
 
 .logo {
@@ -168,6 +174,7 @@ p {
 .motto {
   margin: 0;
   color: var(--muted);
+  white-space: nowrap;
 }
 
 .toc {
@@ -191,23 +198,76 @@ p {
   border-bottom-color: var(--accent);
 }
 
+.toc-mobile {
+  display: none;
+  position: relative;
+}
+
+.toc-mobile summary {
+  list-style: none;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.toc-mobile summary::-webkit-details-marker {
+  display: none;
+}
+
+.toc-mobile summary::after {
+  content: "";
+  width: 1.4rem;
+  height: 0.1rem;
+  background: currentColor;
+  box-shadow: 0 0.35rem 0 0 currentColor, 0 0.7rem 0 0 currentColor;
+}
+
+.toc-mobile-panel {
+  position: absolute;
+  right: 0;
+  margin-top: 0.8rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  display: grid;
+  gap: 0.6rem;
+  min-width: 12rem;
+  box-shadow: 0 18px 30px rgba(20, 16, 12, 0.12);
+}
+
+.toc-mobile-panel a {
+  color: var(--ink);
+}
+
+.toc-mobile[open] summary {
+  color: var(--accent);
+}
+
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
-  gap: 3rem;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
   align-items: start;
 }
 
 .hero-text {
-  max-width: 44rem;
+  max-width: 60ch;
 }
 
 .hero-card {
   border: 1px solid var(--line);
   background: #fbfaf7;
   border-radius: 12px;
-  padding: 1.4rem 1.6rem;
+  padding: 1.2rem 1.4rem;
   box-shadow: 0 18px 40px rgba(20, 16, 12, 0.08);
+  max-width: 320px;
+  align-self: start;
 }
 
 .card-header {
@@ -469,11 +529,10 @@ p {
   color: var(--footer-ink);
 }
 
-@media (min-width: 760px) {
-  .brand {
-    flex-direction: row;
-    align-items: baseline;
-    gap: 1.5rem;
+@media (min-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3.5rem;
   }
 }
 
@@ -484,6 +543,10 @@ p {
 
   .toc {
     display: none;
+  }
+
+  .toc-mobile {
+    display: block;
   }
 
   .hero-grid {
