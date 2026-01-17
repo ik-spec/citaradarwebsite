@@ -1,6 +1,7 @@
 :root {
   color-scheme: light;
   --paper: #f7f3ed;
+  --tone: #f3eee7;
   --ink: #1e1b17;
   --muted: #4f4a43;
   --line: #ddd5c8;
@@ -42,9 +43,10 @@ a:focus-visible {
 h1,
 h2 {
   line-height: 1.15;
-  letter-spacing: 0.005em;
+  letter-spacing: 0.004em;
   margin: 0 0 1.2rem;
   font-weight: 600;
+  text-wrap: balance;
 }
 
 h1 {
@@ -74,6 +76,10 @@ p {
 
 .section + .section {
   border-top: 1px solid var(--line);
+}
+
+.tone {
+  background: var(--tone);
 }
 
 .site-header {
@@ -143,7 +149,6 @@ p {
   padding: 0;
   display: grid;
   gap: 1.75rem;
-  max-width: 72ch;
 }
 
 .step {
@@ -158,6 +163,7 @@ p {
   font-weight: 600;
   line-height: 1;
   color: var(--accent);
+  min-width: 2.4rem;
 }
 
 .step-body {
@@ -224,28 +230,62 @@ p {
 }
 
 .faq-item {
-  margin: 1.6rem 0;
+  border-top: 1px solid var(--line);
+  padding: 1.2rem 0;
 }
 
-.faq-question {
+.faq-item:last-of-type {
+  border-bottom: 1px solid var(--line);
+}
+
+.faq-item summary {
+  cursor: pointer;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.faq-item[open] summary::after {
+  content: "—";
+}
+
+.faq-answer {
+  margin-top: 0.8rem;
 }
 
 .testimonials {
-  display: grid;
-  gap: 2.2rem;
+  display: flex;
+  gap: 1.6rem;
   margin-top: 2rem;
+  overflow-x: auto;
+  padding-bottom: 0.8rem;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 1rem;
+  -webkit-overflow-scrolling: touch;
 }
 
 .testimonial {
-  border-top: 1px solid var(--line);
-  padding-top: 1.4rem;
-}
-
-.testimonial:first-child {
-  border-top: none;
-  padding-top: 0;
+  flex: 0 0 min(520px, 85vw);
+  border: 1px solid var(--line);
+  padding: 1.4rem 1.6rem;
+  scroll-snap-align: start;
 }
 
 .testimonial-meta {
