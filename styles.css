@@ -278,8 +278,7 @@ p {
   width: 1.4rem;
   height: 0.1rem;
   background: currentColor;
-  box-shadow: 0 0.35rem 0 0 currentColor, 0 0.7rem 0 0 currentColor;
-  transform: translateY(-1px);
+  box-shadow: 0 -0.35rem 0 0 currentColor, 0 0.35rem 0 0 currentColor;
 }
 
 .toc-mobile-panel {
@@ -338,13 +337,24 @@ p {
   margin-bottom: 1rem;
 }
 
+.telegram-avatars {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
 .telegram-avatar {
-  width: 2.2rem;
-  height: 2.2rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   object-fit: cover;
   border: 1px solid var(--line);
   background: #efe9e1;
+}
+
+.telegram-avatar.secondary {
+  width: 1.7rem;
+  height: 1.7rem;
 }
 
 .telegram-meta {
