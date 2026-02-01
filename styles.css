@@ -350,7 +350,8 @@ p {
   padding: 1.3rem 1.4rem;
   box-shadow: none;
   max-width: 320px;
-  align-self: start;
+  align-self: flex-start;
+  margin-left: auto;
 }
 
 .telegram-header {
@@ -761,7 +762,7 @@ p {
   }
 
   .hero-side {
-    height: clamp(220px, 65vw, 360px);
+    height: clamp(280px, 85vw, 460px);
     padding: clamp(0.75rem, 3vw, 1.2rem);
   }
 
