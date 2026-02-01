@@ -313,10 +313,13 @@ p {
 .hero-side {
   position: relative;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: flex-start;
-  min-height: clamp(280px, 42vw, 520px);
-  padding: clamp(1rem, 2.4vw, 2.2rem);
+  align-self: start;
+  width: min(100%, 520px);
+  margin-left: auto;
+  height: clamp(280px, 36vw, 420px);
+  padding: clamp(0.9rem, 2vw, 1.6rem);
 }
 
 .hero-text {
@@ -742,6 +745,12 @@ p {
 
   .hero-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-side {
+    width: 100%;
+    margin-left: 0;
+    height: clamp(240px, 60vw, 360px);
   }
 
   .footer-grid {
