@@ -342,16 +342,16 @@ p {
 }
 
 .hero-card {
-  position: relative;
+  position: absolute;
+  top: clamp(1rem, 3vw, 2rem);
+  right: clamp(1rem, 3vw, 2rem);
   z-index: 1;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.94);
   border-radius: 16px;
   padding: 1.3rem 1.4rem;
   box-shadow: none;
-  max-width: 320px;
-  align-self: flex-start;
-  margin-left: auto;
+  width: min(90%, 360px);
 }
 
 .telegram-header {
@@ -762,7 +762,7 @@ p {
   }
 
   .hero-side {
-    height: clamp(280px, 85vw, 460px);
+    height: clamp(1120px, 220vw, 1840px);
     padding: clamp(0.75rem, 3vw, 1.2rem);
   }
 
