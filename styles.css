@@ -315,10 +315,8 @@ p {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  align-self: start;
-  width: min(100%, 520px);
-  margin-left: auto;
-  height: clamp(280px, 36vw, 420px);
+  width: 100%;
+  height: clamp(240px, 60vw, 360px);
   padding: clamp(0.9rem, 2vw, 1.6rem);
 }
 
@@ -721,6 +719,12 @@ p {
   .hero-grid {
     grid-template-columns: 1.2fr 0.8fr;
     gap: 3.5rem;
+    align-items: stretch;
+  }
+
+  .hero-side {
+    height: 100%;
+    align-self: stretch;
   }
 }
 
@@ -748,9 +752,8 @@ p {
   }
 
   .hero-side {
-    width: 100%;
-    margin-left: 0;
-    height: clamp(240px, 60vw, 360px);
+    height: clamp(220px, 70vw, 340px);
+    padding: clamp(0.75rem, 3vw, 1.2rem);
   }
 
   .footer-grid {
