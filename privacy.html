@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Política de privacidad — CitaRadar</title>
+    <meta
+      name="description"
+      content="Política de privacidad de CitaRadar: tratamiento responsable y transparente de datos personales."
+    />
+    <meta property="og:title" content="Política de privacidad — CitaRadar" />
+    <meta
+      property="og:description"
+      content="CitaRadar respeta tu privacidad y trata los datos personales de forma responsable y transparente."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="brand-text">
+            <a class="logo" href="index.html">CitaRadar</a>
+            <span class="brand-tagline">Citas al Instante</span>
+          </div>
+          <img class="brand-illustration" src="Illustration.png" alt="" aria-hidden="true" />
+        </div>
+        <nav class="toc" aria-label="Secciones principales">
+          <a href="index.html#como-funciona">Cómo funciona</a>
+          <a href="index.html#tramites">Trámites</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="index.html#opiniones">Opiniones</a>
+          <a href="index.html#creadores">Sobre nosotros</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <details class="toc-mobile">
+          <summary aria-label="Abrir menú de navegación">Menú</summary>
+          <div class="toc-mobile-panel">
+            <a href="index.html#como-funciona">Cómo funciona</a>
+            <a href="index.html#tramites">Trámites</a>
+            <a href="index.html#faq">FAQ</a>
+            <a href="index.html#opiniones">Opiniones</a>
+            <a href="index.html#creadores">Sobre nosotros</a>
+            <a href="#contacto">Contacto</a>
+          </div>
+        </details>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="section paper">
+        <div class="container content">
+          <h1>Política de privacidad</h1>
+          <p>
+            En CitaRadar respetamos tu privacidad y tratamos los datos personales de forma responsable y
+            transparente.
+          </p>
+          <p>
+            CitaRadar es un servicio de notificaciones que informa sobre la disponibilidad de citas en portales
+            oficiales.<br />
+            No solicitamos contraseñas, credenciales de acceso ni documentos personales.<br />
+            No almacenamos copias de documentos ni datos sensibles.
+          </p>
+          <p>Los únicos datos que podemos tratar son aquellos estrictamente necesarios para el funcionamiento del servicio, como:</p>
+          <ul>
+            <li>identificadores técnicos básicos,</li>
+            <li>preferencias relacionadas con el seguimiento de citas,</li>
+            <li>datos de contacto para el envío de notificaciones (por ejemplo, a través de Telegram).</li>
+          </ul>
+          <p>No utilizamos los datos para fines distintos a la prestación del servicio.<br />No vendemos ni cedemos datos a terceros.</p>
+          <p>
+            El usuario puede dejar de utilizar CitaRadar en cualquier momento.<br />
+            Aplicamos el principio de minimización de datos y adoptamos medidas técnicas y organizativas adecuadas
+            para proteger la información tratada.
+          </p>
+          <p>
+            El tratamiento de los datos se realiza conforme a la normativa aplicable en materia de protección de datos,
+            incluido el Reglamento General de Protección de Datos (RGPD / GDPR).
+          </p>
+          <p>
+            Para cualquier consulta relacionada con la privacidad, puedes ponerte en contacto con nosotros a través de
+            los canales indicados en esta web.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <a class="fab-cta" href="https://t.me/citaradarbot">Empezar en Telegram</a>
+
+    <footer class="site-footer" id="contacto">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <p class="footer-logo">CitaRadar</p>
+          <p class="footer-tagline">
+            Servicio independiente de notificaciones<br />
+            para monitorizar la disponibilidad de citas<br />
+            en portales oficiales de España
+          </p>
+        </div>
+        <div class="footer-meta">
+          <p class="footer-links">
+            <a href="privacy.html">Política de privacidad</a><br />
+            <a href="terms.html">Términos de uso</a>
+          </p>
+          <p class="footer-contact">
+            <a class="contact-row" href="https://t.me/citaradarbot">
+              <span class="telegram-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M20.9 4.3 3.8 10.9c-1.2.5-1.2 1.2-.2 1.5l4.4 1.4 1.7 5.1c.2.6.1.8.7.8.5 0 .7-.2 1-.5l2.1-2 4.3 3.2c.8.4 1.3.2 1.5-.7l2.6-12.1c.3-1.1-.4-1.6-1.1-1.4Zm-3.4 3.1-7.7 7.1-.3 3.1-1.2-3.9 9.2-6.1Z"
+                  />
+                </svg>
+              </span>
+              +34614460481 (solo Telegram)
+            </a>
+            <br />
+          </p>
+        </div>
+      </div>
+      <div class="container footer-illustration" aria-hidden="true">
+        <img src="Illustration.png" alt="" />
+      </div>
+    </footer>
+    <script>
+      (() => {
+        const root = document.documentElement;
+        const maxShift = 140;
+        let ticking = false;
+        const update = () => {
+          const scrollTop = window.scrollY || window.pageYOffset;
+          const shift = Math.min(maxShift, scrollTop * 0.2);
+          root.style.setProperty("--scroll-shift", `${shift}px`);
+          ticking = false;
+        };
+        update();
+        window.addEventListener("scroll", () => {
+          if (!ticking) {
+            window.requestAnimationFrame(update);
+            ticking = true;
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

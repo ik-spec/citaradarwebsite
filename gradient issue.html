@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CitaRadar</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="brand">
+          <span class="brand-name">CitaRadar</span>
+          <span class="brand-tagline">Saber cu&aacute;ndo hay cita</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section" id="inicio">
+        <div class="container">
+          <h1>A veces conseguir una cita es m&aacute;s dif&iacute;cil que el propio tr&aacute;mite.</h1>
+          <p class="lead">
+            A veces todo est&aacute; listo: los documentos reunidos, los requisitos claros, pero la
+            cita simplemente no aparece.
+          </p>
+          <p>
+            Las citas desaparecen en segundos. Los portales oficiales muestran una y otra vez
+            &ldquo;no hay fechas disponibles&rdquo;. Comprobar se convierte en una rutina que consume
+            tiempo y energ&iacute;a.
+          </p>
+          <p>CitaRadar nace para simplificar ese momento.</p>
+          <div class="actions">
+            <a class="button primary" href="https://t.me/citaradarbot" target="_blank" rel="noreferrer">
+              Empezar en Telegram
+            </a>
+            <a class="button secondary" href="#como-funciona">C&oacute;mo funciona</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="que-hace">
+        <div class="container">
+          <h2>Qu&eacute; hace CitaRadar</h2>
+          <p class="narrow">
+            Monitorizamos la aparici&oacute;n de citas disponibles en portales oficiales de
+            organismos p&uacute;blicos y te avisamos por Telegram cuando una cita pasa a estar
+            disponible.
+          </p>
+          <p class="muted">
+            Es un bloque corto y explicativo, pensado para leerse como un resumen claro.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="como-funciona">
+        <div class="container">
+          <h2>&iquest;C&oacute;mo funciona?</h2>
+          <p class="narrow">
+            CitaRadar es un servicio de notificaciones. No interviene en el funcionamiento de
+            los portales ni realiza la cita por el usuario.
+          </p>
+          <ol class="steps">
+            <li>Seleccionas la ciudad y el tr&aacute;mite que necesitas.</li>
+            <li>El bot comprueba autom&aacute;ticamente el portal oficial las 24 horas del d&iacute;a.</li>
+            <li>En cuanto aparece una cita disponible, recibes una notificaci&oacute;n en Telegram.</li>
+            <li>Accedes al enlace y realizas la cita directamente en la web oficial.</li>
+          </ol>
+          <p>
+            No aceleramos el sistema ni influimos en la asignaci&oacute;n de citas. Simplemente
+            ayudamos a no perder el momento en que la cita est&aacute; disponible.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="tramites">
+        <div class="container">
+          <h2>Tr&aacute;mites disponibles en CitaRadarBot</h2>
+          <p class="muted">
+            El cat&aacute;logo de tr&aacute;mites puede variar seg&uacute;n la ciudad y la disponibilidad
+            del portal oficial.
+          </p>
+          <div class="details-grid">
+            <details>
+              <summary>Extranjer&iacute;a</summary>
+              <p class="muted">Oficina de Extranjer&iacute;a / Polic&iacute;a Nacional</p>
+              <ul>
+                <li>Toma de huellas (expedici&oacute;n de la Tarjeta de Identidad de Extranjero, TIE)</li>
+                <li>Tarjeta de Identidad de Extranjero (TIE) &mdash; Primera expedici&oacute;n</li>
+                <li>Tarjeta de Identidad de Extranjero (TIE) &mdash; Renovaci&oacute;n</li>
+                <li>Pr&oacute;rroga de estancia</li>
+                <li>Certificado de registro de ciudadano de la Uni&oacute;n Europea</li>
+                <li>Tarjeta de residencia de familiar de ciudadano de la Uni&oacute;n Europea</li>
+                <li>Asignaci&oacute;n de N&uacute;mero de Identidad de Extranjero (NIE)</li>
+                <li>Autorizaci&oacute;n de regreso</li>
+                <li>Duplicado de TIE por robo, p&eacute;rdida o deterioro</li>
+                <li>Autorizaci&oacute;n inicial de residencia</li>
+                <li>Autorizaci&oacute;n inicial de trabajo</li>
+                <li>Canje o modificaci&oacute;n de tarjeta</li>
+                <li>Recogida o entrega de documentaci&oacute;n</li>
+                <li>Asistencia e informaci&oacute;n &mdash; ayuda para identificar el tr&aacute;mite correcto</li>
+              </ul>
+            </details>
+
+            <details>
+              <summary>Empadronamiento</summary>
+              <p class="muted">Padr&oacute;n Municipal de Habitantes</p>
+              <ul>
+                <li>Alta en el Padr&oacute;n Municipal de Habitantes (nueva inscripci&oacute;n)</li>
+                <li>Cambio de domicilio en el Padr&oacute;n Municipal</li>
+                <li>Baja en el Padr&oacute;n Municipal</li>
+                <li>Certificado de empadronamiento</li>
+                <li>Volante de empadronamiento</li>
+                <li>Alta o modificaci&oacute;n de datos de familiar en el padr&oacute;n</li>
+              </ul>
+            </details>
+
+            <details>
+              <summary>Tr&aacute;fico</summary>
+              <p class="muted">Direcci&oacute;n General de Tr&aacute;fico (DGT)</p>
+              <ul>
+                <li>Canje de permiso de conducci&oacute;n extranjero</li>
+                <li>Renovaci&oacute;n del permiso de conducci&oacute;n</li>
+                <li>Obtenci&oacute;n del permiso de conducci&oacute;n (primera vez)</li>
+                <li>Duplicado del permiso de conducci&oacute;n</li>
+                <li>Permiso Internacional de Conducci&oacute;n</li>
+                <li>Tr&aacute;mites relacionados con veh&iacute;culos</li>
+                <li>Examen te&oacute;rico de conducci&oacute;n</li>
+                <li>Examen pr&aacute;ctico de conducci&oacute;n</li>
+                <li>Consulta de puntos del carn&eacute; de conducir</li>
+                <li>Informes de conductor o del permiso</li>
+              </ul>
+            </details>
+
+            <details>
+              <summary>DNI y Pasaporte</summary>
+              <p class="muted">
+                Polic&iacute;a Nacional. En algunos tr&aacute;mites puede existir CAPTCHA, por lo
+                que la monitorizaci&oacute;n puede estar limitada.
+              </p>
+              <ul>
+                <li>Documento Nacional de Identidad (DNI) &mdash; Primera expedici&oacute;n</li>
+                <li>Documento Nacional de Identidad (DNI) &mdash; Renovaci&oacute;n</li>
+                <li>Documento Nacional de Identidad (DNI) &mdash; Duplicado</li>
+                <li>Pasaporte &mdash; Primera expedici&oacute;n</li>
+                <li>Pasaporte &mdash; Renovaci&oacute;n</li>
+              </ul>
+            </details>
+
+            <details>
+              <summary>Seguridad Social</summary>
+              <p class="muted">Instituto Nacional de la Seguridad Social (INSS)</p>
+              <ul>
+                <li>Asignaci&oacute;n o consulta del N&uacute;mero de la Seguridad Social</li>
+                <li>Afiliaci&oacute;n a la Seguridad Social</li>
+                <li>Prestaciones por maternidad y paternidad</li>
+                <li>Incapacidad temporal</li>
+                <li>Pensiones y jubilaci&oacute;n</li>
+                <li>Ingreso M&iacute;nimo Vital (IMV)</li>
+                <li>Obtenci&oacute;n de informes y certificados</li>
+                <li>Consulta general de prestaciones</li>
+              </ul>
+            </details>
+
+            <details>
+              <summary>SEPE</summary>
+              <p class="muted">
+                Servicio P&uacute;blico de Empleo Estatal. Las prestaciones se gestionan en el SEPE y
+                la demanda de empleo suele corresponder al servicio auton&oacute;mico.
+              </p>
+              <ul>
+                <li>Solicitud de prestaci&oacute;n por desempleo</li>
+                <li>Subsidios y ayudas por desempleo</li>
+                <li>Reanudaci&oacute;n de prestaci&oacute;n</li>
+                <li>Certificados e informes del SEPE</li>
+                <li>Consulta de informaci&oacute;n general</li>
+              </ul>
+            </details>
+
+            <details>
+              <summary>Hacienda</summary>
+              <p class="muted">
+                Agencia Estatal de Administraci&oacute;n Tributaria (AEAT). Secci&oacute;n en fase
+                beta, la disponibilidad puede ser limitada.
+              </p>
+              <ul>
+                <li>Asistencia para la declaraci&oacute;n del IRPF</li>
+                <li>Obtenci&oacute;n de certificados tributarios</li>
+                <li>Presentaci&oacute;n de documentaci&oacute;n tributaria</li>
+                <li>Cita para asistencia general en la Agencia Tributaria</li>
+                <li>Consulta de disponibilidad de cita</li>
+              </ul>
+            </details>
+
+            <details>
+              <summary>Registro Civil</summary>
+              <p class="muted">
+                Registro Civil. La organizaci&oacute;n de citas puede variar seg&uacute;n la ciudad.
+              </p>
+              <ul>
+                <li>Inscripci&oacute;n de matrimonio o pareja</li>
+                <li>Inscripci&oacute;n de nacimiento</li>
+                <li>Inscripci&oacute;n de defunci&oacute;n</li>
+                <li>Nacionalidad espa&ntilde;ola y jura</li>
+                <li>Localizaci&oacute;n de inscripci&oacute;n en el Registro Civil</li>
+              </ul>
+            </details>
+
+            <details>
+              <summary>Otros tr&aacute;mites municipales</summary>
+              <p class="muted">
+                Tr&aacute;mites municipales diversos (el cat&aacute;logo depende del ayuntamiento
+                correspondiente).
+              </p>
+              <ul>
+                <li>Licencia municipal de obras</li>
+                <li>Certificado de convivencia</li>
+                <li>Inscripci&oacute;n como pareja de hecho</li>
+                <li>Inscripci&oacute;n escolar</li>
+                <li>Gesti&oacute;n de residuos especiales</li>
+                <li>Tarjeta de residente para estacionamiento</li>
+                <li>Registro municipal de animales de compa&ntilde;&iacute;a</li>
+              </ul>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="privacidad">
+        <div class="container">
+          <h2>Privacidad y seguridad</h2>
+          <p>
+            No solicitamos nombres de usuario ni contrase&ntilde;as. No almacenamos documentos.
+            No recopilamos datos innecesarios para el funcionamiento del servicio.
+          </p>
+          <p class="narrow">
+            Puedes dejar de utilizar CitaRadar en cualquier momento. Aplicamos principios de
+            minimizaci&oacute;n de datos y cumplimos con el Reglamento General de Protecci&oacute;n de
+            Datos (GDPR).
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="container">
+          <h2>Preguntas frecuentes</h2>
+          <div class="details-grid">
+            <details>
+              <summary>&iquest;CitaRadar acelera los portales o la obtenci&oacute;n de citas?</summary>
+              <p>
+                No. CitaRadar no acelera los sitios oficiales ni influye en la asignaci&oacute;n de
+                citas. La disponibilidad depende exclusivamente del organismo correspondiente.
+              </p>
+            </details>
+            <details>
+              <summary>&iquest;CitaRadar garantiza la obtenci&oacute;n de una cita?</summary>
+              <p>
+                No. No garantizamos citas ni vendemos citas. El bot solo ayuda a no perder el
+                momento en que una cita est&aacute; disponible.
+              </p>
+            </details>
+            <details>
+              <summary>&iquest;Utiliza m&eacute;todos no oficiales o de evasi&oacute;n?</summary>
+              <p>
+                No. CitaRadar no emplea m&eacute;todos prohibidos ni t&eacute;cnicas agresivas.
+                Trabajamos &uacute;nicamente con informaci&oacute;n p&uacute;blica y accesible.
+              </p>
+            </details>
+            <details>
+              <summary>&iquest;Con qu&eacute; sitios trabaja CitaRadar?</summary>
+              <p>
+                Exclusivamente con portales oficiales de organismos estatales y municipales de
+                Espa&ntilde;a.
+              </p>
+            </details>
+            <details>
+              <summary>&iquest;Es CitaRadar un servicio p&uacute;blico?</summary>
+              <p>
+                No. CitaRadar es un servicio independiente y no est&aacute; afiliado a organismos
+                p&uacute;blicos.
+              </p>
+            </details>
+            <details>
+              <summary>&iquest;Qui&eacute;n realiza la cita?</summary>
+              <p>
+                La cita la realizas t&uacute; mismo directamente en la web oficial correspondiente.
+                CitaRadar no realiza citas en nombre del usuario.
+              </p>
+            </details>
+            <details>
+              <summary>&iquest;Debo facilitar contrase&ntilde;as o documentos?</summary>
+              <p>No. CitaRadar nunca solicita contrase&ntilde;as ni documentos.</p>
+            </details>
+            <details>
+              <summary>En resumen, &iquest;cu&aacute;l es la funci&oacute;n del servicio?</summary>
+              <p>
+                No sustituimos al portal ni intervenimos en el sistema. Solo te avisamos cuando
+                la cita aparece.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="opiniones">
+        <div class="container">
+          <h2>Opiniones de usuarios</h2>
+          <div class="testimonials">
+            <article class="testimonial">
+              <p>
+                Comprobaba el portal varias veces al d&iacute;a, sobre todo por la noche. Durante
+                semanas no hab&iacute;a citas. Dej&eacute; de comprobarlo manualmente. El aviso
+                lleg&oacute; de noche y por la ma&ntilde;ana ya ten&iacute;a la cita.
+              </p>
+              <span>Anna K., Kazajist&aacute;n &mdash; Toma de huellas (TIE renovaci&oacute;n)</span>
+            </article>
+            <article class="testimonial">
+              <p>
+                En mi ciudad era casi imposible. CitaRadar elimin&oacute; la necesidad de
+                comprobar el portal cada d&iacute;a.
+              </p>
+              <span>Marc L., Francia &mdash; Empadronamiento</span>
+            </article>
+            <article class="testimonial">
+              <p>
+                La incertidumbre es lo m&aacute;s dif&iacute;cil. El aviso lleg&oacute; temprano y pude
+                reservar a tiempo.
+              </p>
+              <span>Giulia R., Italia &mdash; Certificado de registro de ciudadano de la UE</span>
+            </article>
+            <article class="testimonial">
+              <p>
+                Mucho m&aacute;s c&oacute;modo que comprobar el portal cada noche.
+              </p>
+              <span>David M., Estados Unidos &mdash; Canje de permiso de conducci&oacute;n (DGT)</span>
+            </article>
+            <article class="testimonial">
+              <p>
+                En un momento de estr&eacute;s, este servicio fue realmente &uacute;til.
+              </p>
+              <span>Luc&iacute;a P., Argentina &mdash; Prestaci&oacute;n por desempleo (SEPE)</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="cierre">
+        <div class="container">
+          <h2>Esperar es la parte m&aacute;s dif&iacute;cil del proceso.</h2>
+          <p class="narrow">
+            Comprobar el portal una y otra vez es un trabajo que nadie quiere hacer. CitaRadar
+            se encarga de ello y te avisa cuando la cita aparece.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="https://t.me/citaradarbot" target="_blank" rel="noreferrer">
+              Empezar en Telegram
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="creadores">
+        <div class="container">
+          <h2>Creadores de CitaRadar</h2>
+          <p>
+            LIAH es el Leading Intelligent Architecture Hub &mdash; Arquitectos de un Futuro
+            Inteligente. Dise&ntilde;amos, construimos y evolucionamos plataformas inteligentes,
+            basadas en decisiones, tanto para empresas como para consumidores.
+          </p>
+          <p>
+            Nuestro enfoque consiste en transformar datos complejos, herramientas fragmentadas y
+            el potencial abstracto de la inteligencia artificial en sistemas claros, accionables
+            y econ&oacute;micamente escalables.
+          </p>
+          <p>
+            M&aacute;s que desarrollar productos aislados, arquitectamos soluciones integrales que
+            abordan problemas reales, permitiendo a empresas, inversores y personas tomar decisiones
+            mejores, m&aacute;s r&aacute;pidas y con mayor confianza.
+          </p>
+          <p>
+            En LIAH, la innovaci&oacute;n no es solo tecnolog&iacute;a. Es una forma de pensar
+            orientada a crear sistemas inteligentes que escalan, se adaptan y perduran.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          CitaRadar &mdash; servicio independiente de notificaciones para monitorizar la
+          disponibilidad de citas en portales oficiales de Espa&ntilde;a.
+        </p>
+        <div class="footer-links">
+          <a href="#">Pol&iacute;tica de privacidad</a>
+          <a href="#">T&eacute;rminos de uso</a>
+        </div>
+        <p class="muted">Contacto: hola@citaradar.es &middot; +34 000 000 000</p>
+      </div>
+    </footer>
+  </body>
+</html>
